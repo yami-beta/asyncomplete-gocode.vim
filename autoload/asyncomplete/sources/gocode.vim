@@ -9,7 +9,7 @@ function! asyncomplete#sources#gocode#completor(opt, ctx) abort
 
     let l:config = get(a:opt, 'config', {})
     let l:gocode_path = get(l:config, 'gocode_path', 'gocode')
-    let l:cmd = [l:gocode_path, '-f=vim', '--in='.l:file, 'autocomplete', expand('%:p'), s:gocode_cursor()]
+    let l:cmd = [l:gocode_path, '-f=vim', '-source', '--in='.l:file, 'autocomplete', expand('%:p'), s:gocode_cursor()]
 
     let l:info = { 'stdout_buffer': '', 'tmpfile': l:file, 'opt': a:opt, 'ctx': a:ctx }
     let l:jobid = s:exec(l:cmd, 1, function('s:on_exec_events', [l:info]))

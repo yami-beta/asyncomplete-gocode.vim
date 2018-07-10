@@ -27,4 +27,4 @@ call asyncomplete#register_source(asyncomplete#sources#gocode#get_source_options
 Note: `config` is optional. `gocode_path` defaults to `gocode` i.e., `gocode` binary should exist in the `PATH` if config is not specified.
 
 ### Credits
-* [https://github.com/nsf/gocode](https://github.com/nsf/gocode)
+* [https://github.com/mdempsky/gocode](https://github.com/mdempsky/gocode)
